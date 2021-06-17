@@ -41,4 +41,3 @@ vue create project-name
 ```
 vue add vuetify
 ```
-	
