@@ -1,43 +1,42 @@
-# Project
+# Como Rodar o Projeto
 
-## Project setup
+## Instalar o Node.js e npm na máquina, caso ainda não estejam instalados 
+Instruções no link: (https://www.npmjs.com/get-npm).
+
+## Clonar o Repositório
+```
+git clone https://github.com/gabrielapivetta/Vue_and_Vuetify.git
+```
+## Abrir a pasta do projeto
+```
+cd Vue_and_Vuetify
+```
+## Instalar as Dependências
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## Compilar e rodar o projeto em ambiente de desenvolvimento
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
+# Como Inicializei o projeto
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-# How I started the project
-
-### Install vue js:
+### Instalei o Vue.js:
 ```
 npm install vue
 ```
-### Install vue cli:
+### Instalei o Vue CLI:
 ```
 npm install -g @vue/cli
 ```
-### Create the project:
+### Criei o projeto:
 ```
 vue create project-name
 ```
-### Install vuetify: 
+### Instalei o Vuetify: 
 ```
 vue add vuetify
 ```
