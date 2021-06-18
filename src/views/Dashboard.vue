@@ -39,7 +39,7 @@
 
       <v-card flat class="" v-for="test in tests" :key="test.title">
         <v-layout wrap :class="`pa-3 test ${test.subject}`">
-          <v-flex xs12 md5>
+          <v-flex xs12 md4>
             <div class="caption grey--text">Assunto</div>
             <div>{{ test.title }}</div>
           </v-flex>
@@ -51,6 +51,10 @@
             <div class="caption grey--text">Data de Entrega</div>
             <div>{{ test.due }}</div>
           </v-flex>
+          <v-flex xs6 sm4 md1>
+            <div class="caption grey--text">Nota</div>
+            <div>{{ test.score }}</div>
+          </v-flex>
           <v-flex xs6 sm4 md2>
             <div class="text-center">
               <v-chip
@@ -58,8 +62,6 @@
                 >{{ test.subject }}</v-chip
               >
             </div>
-            <!--<div class="caption grey--text">Matéria</div>
-            <div>{{ test.subject }}</div>-->
           </v-flex>
         </v-layout>
         <v-divider></v-divider>
@@ -79,6 +81,7 @@ export default {
           student: "João Cardoso",
           due: "01/07/2019",
           subject: "Matemática",
+          score: 10,
           content:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!",
         },
@@ -87,6 +90,7 @@ export default {
           student: "Ana Julia Almeida",
           due: "10/01/2019",
           subject: "Física",
+          score: 8.5,
           content:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!",
         },
@@ -95,6 +99,7 @@ export default {
           student: "Henrique da Silva",
           due: "20/12/2018",
           subject: "Química",
+          score: 7,
           content:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!",
         },
@@ -103,6 +108,7 @@ export default {
           student: "Clara Barbosa",
           due: "05/11/2021",
           subject: "Geografia",
+          score: 9.8,
           content:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!",
         },
