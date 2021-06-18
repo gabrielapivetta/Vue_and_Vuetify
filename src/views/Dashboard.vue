@@ -37,7 +37,7 @@
         </v-tooltip>
       </v-layout>
 
-      <v-card flat class="" v-for="test in tests" :key="test.title">
+      <v-card flat class="" v-for="(test, index) in tests" :key="test.title">
         <v-layout wrap :class="`pa-3 test ${test.subject}`">
           <v-flex xs12 md4>
             <div class="caption grey--text">Assunto</div>
@@ -63,6 +63,7 @@
               >
             </div>
           </v-flex>
+          <v-btn @click="deleteTest(index)">Delete</v-btn>
         </v-layout>
         <v-divider></v-divider>
       </v-card>
@@ -83,6 +84,12 @@ export default {
     sortBy(prop) {
       this.tests.sort((a, b) => (a[prop] < b[prop] ? -1 : 1));
     },
+    deleteTest(index){
+      this.tests.splice(index, 1)
+      const updatedData = JSON.stringify(this.tests)
+      window.localStorage.setItem('Provas', updatedData) 
+      window.location.reload()
+    }
   },
 };
 </script>
