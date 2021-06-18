@@ -6,11 +6,6 @@
                 <span class="font-weight-light">My</span>
                 <span class="font-weight-medium">School</span>
             </v-toolbar-title>
-            <v-spacer></v-spacer>
-            <v-btn flat color="grey lighten-2">
-                <span>Sign Out</span>
-                <v-icon right>mdi-exit-to-app</v-icon>
-            </v-btn>
         </v-toolbar>
 
         <v-navigation-drawer v-model="drawer" app class="teal lighten-2">

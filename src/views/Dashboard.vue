@@ -72,47 +72,11 @@
 
 
 <script>
+const provas = window.localStorage.getItem('Provas') || "[]"
 export default {
   data() {
     return {
-      tests: [
-        {
-          title: "Polígonos",
-          student: "João Cardoso",
-          due: "01/07/2019",
-          subject: "Matemática",
-          score: 10,
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!",
-        },
-        {
-          title: "Ondulatória",
-          student: "Ana Julia Almeida",
-          due: "10/01/2019",
-          subject: "Física",
-          score: 8.5,
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!",
-        },
-        {
-          title: "Oxidação",
-          student: "Henrique da Silva",
-          due: "20/12/2018",
-          subject: "Química",
-          score: 7,
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!",
-        },
-        {
-          title: "Cartografia",
-          student: "Clara Barbosa",
-          due: "05/11/2021",
-          subject: "Geografia",
-          score: 9.8,
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!",
-        },
-      ],
+      tests: JSON.parse(provas)
     };
   },
   methods: {
