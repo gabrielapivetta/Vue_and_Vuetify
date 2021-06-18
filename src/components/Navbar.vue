@@ -18,6 +18,8 @@
                 </v-flex>
                 <v-flex>
                     <Popup/>
+                    <v-divider></v-divider>
+                    <PopupAluno/>
                 </v-flex>
             </v-layout>
             <v-list>
@@ -38,8 +40,10 @@
 
 <script>
 import Popup from './Popup.vue'
+import PopupAluno from './Popup-aluno.vue'
+
 export default {
-    components: {Popup},
+    components: {Popup, PopupAluno},
     data () {
         return {
             drawer: false,

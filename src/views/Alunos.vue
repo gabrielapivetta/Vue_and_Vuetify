@@ -5,23 +5,12 @@
     <v-container class="my-5">
       
       <v-layout row wrap>
-        <v-flex xs12 sm6 md4 lg3 v-for="student in students" :key="student.name">
+        <v-flex xs12 sm6 md4 lg3 v-for="(student, index) in students" :key="student.name">
           <v-card flat class="text-center ma-3">
-            <v-responsive class="pt-4">
-              <v-avatar size="100">
-                <img :src="student.avatar"/>
-              </v-avatar>
-            </v-responsive>
             <v-card-text>
               <div class="subheading">{{ student.name }}</div>
-              <div class="grey--text">{{ student.role }}</div>
             </v-card-text>
-            <v-card-actions>
-              <v-btn flat color="grey">
-                <v-icon small left>mdi-message</v-icon>
-                <span class="">Message</span>
-              </v-btn>
-            </v-card-actions>
+            <v-btn @click="deleteTest(index)">Delete</v-btn>
           </v-card>
         </v-flex>
       </v-layout>
@@ -31,16 +20,19 @@
 </template>
 
 <script>
+const alunos = window.localStorage.getItem('Alunos') || "[]"
 export default {
   data() {
     return {
-      students: [
-        { name: 'The Net Ninja', role: 'Web developer', avatar: './avatar-1.jpg' },
-        { name: 'Ryu', role: 'Graphic designer', avatar: './avatar-2.jpg' },
-        { name: 'Chun Li', role: 'Web developer', avatar: './avatar-3.jpg' },
-        { name: 'Gouken', role: 'Social media maverick', avatar: './avatar-4.jpg' },
-        { name: 'Yoshi', role: 'Sales guru', avatar: './avatar-5.jpg'}
-      ]
+      students: JSON.parse(alunos)
+    }
+  },
+  methods: {
+    deleteTest(index){
+      this.students.splice(index, 1)
+      const updatedData = JSON.stringify(this.students)
+      window.localStorage.setItem('Alunos', updatedData) 
+      window.location.reload()
     }
   }
 }
