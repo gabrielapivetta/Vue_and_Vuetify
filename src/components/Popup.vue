@@ -10,8 +10,8 @@
             <v-form class="px-3">
 
                 <v-text-field label="Assunto" v-model="title" prepend-icon="mdi-folder" ></v-text-field>
-                <!--<v-select v-model="select" :items="students" :rules="[v => !!v || 'Campo Obrigatório']" label="Aluno" prepend-icon="mdi-account" required></v-select>-->
-                <v-text-field label="Aluno" v-model="student" prepend-icon="mdi-account" ></v-text-field>
+                <v-select v-model="student" :items="student" :rules="[v => !!v || 'Campo Obrigatório']" label="Aluno" prepend-icon="mdi-account" required></v-select>
+                <!--<v-text-field label="Aluno" v-model="student" prepend-icon="mdi-account" ></v-text-field>-->
                 <v-textarea label="Descrição" v-model="content" prepend-icon="mdi-pencil" ></v-textarea>
                 <v-text-field label="Nota" v-model="score" prepend-icon="mdi-check" ></v-text-field>
                 <v-text-field label="Data de Entrega" v-model="due" prepend-icon="mdi-calendar-range" ></v-text-field>
@@ -33,7 +33,6 @@ export default {
     data() {
         return {
             title: '',
-            student: '',
             content: '',
             score: '',
             due: '',
@@ -54,7 +53,7 @@ export default {
                 'Matemática',
                 'Português',
             ],
-            students: JSON.parse(alunos).map(aluno => aluno.name)
+            student: JSON.parse(alunos).map(aluno => aluno.name)
         }
     },
     methods: {
