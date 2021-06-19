@@ -39,11 +39,11 @@
 
       <v-card flat class="" v-for="(test, index) in tests" :key="test.title">
         <v-layout wrap :class="`pa-3 test ${test.subject}`">
-          <v-flex xs12 md4>
+          <v-flex xs12 md3>
             <div class="caption grey--text">Assunto</div>
             <div>{{ test.title }}</div>
           </v-flex>
-          <v-flex xs6 sm4 md3>
+          <v-flex xs6 sm4 md2>
             <div class="caption grey--text">Aluno</div>
             <div>{{ test.student }}</div>
           </v-flex>
@@ -63,7 +63,7 @@
               >
             </div>
           </v-flex>
-          <v-btn @click="deleteTest(index)">Delete</v-btn>
+          <v-btn xs6 sm4 md2 @click="deleteTest(index)">Delete</v-btn>
         </v-layout>
         <v-divider></v-divider>
       </v-card>
