@@ -15,8 +15,8 @@
                 <v-textarea label="Descrição" v-model="content" prepend-icon="mdi-pencil" ></v-textarea>
                 <v-text-field label="Nota" v-model="score" prepend-icon="mdi-check" ></v-text-field>
                 <v-text-field label="Data de Entrega" v-model="due" prepend-icon="mdi-calendar-range" ></v-text-field>
-                <v-text-field label="Matéria" v-model="subject" prepend-icon="mdi-book" ></v-text-field>
-                <!--<v-select v-model="select" :items="items" :rules="[v => !!v || 'Campo Obrigatório']" label="Matéria" prepend-icon="mdi-book" required></v-select>-->
+                <!--<v-text-field label="Matéria" v-model="subject" prepend-icon="mdi-book" ></v-text-field>-->
+                <v-select v-model="subject" :items="subject" :rules="[v => !!v || 'Campo Obrigatório']" label="Matéria" prepend-icon="mdi-book" required></v-select>
                 
                 <v-btn flat mt-3 dark color="green" @click="submit">Cadastrar</v-btn>
 
@@ -36,13 +36,12 @@ export default {
             content: '',
             score: '',
             due: '',
-            subject: '',
             /*inputRules: [
                 v => !!v || 'Esse campo é obrigatório',
                 v => v.lengh >= 3 || 'O tamanho mínimo é de três caracteres'
             ]*/
             select: null,
-            items: [
+            subject: [
                 'Artes',
                 'Biologia',
                 'Filosofia',
