@@ -8,9 +8,9 @@
         <v-flex xs12 sm6 md4 lg3 v-for="(student, index) in students" :key="student.name">
           <v-card flat class="text-center ma-3">
             <v-card-text>
-              <div class="subheading">{{ student.name }}</div>
+              <div class="title">{{ student.name }}</div>
             </v-card-text>
-            <v-btn @click="deleteTest(index)">Delete</v-btn>
+            <v-btn @click="deleteTest(index)" class="mb-3">Delete</v-btn>
           </v-card>
         </v-flex>
       </v-layout>

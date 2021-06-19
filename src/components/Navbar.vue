@@ -12,13 +12,16 @@
             <v-layout column align-center>
                 <v-flex class="mt-5">
                     <v-avatar size="100">
-                        <img src="/avatar-1.jpg" alt="">
+                        <img src="/book.ico" alt="">
                     </v-avatar>
                     <p class="white--text subheading mt-1"></p>
                 </v-flex>
                 <v-flex>
                     <Popup/>
                     <v-divider></v-divider>
+                   
+                </v-flex>
+                <v-flex mt-5>
                     <PopupAluno/>
                 </v-flex>
             </v-layout>
@@ -49,7 +52,7 @@ export default {
             drawer: false,
             links: [
                 { icon: 'mdi-view-dashboard', text: 'Dashboard', route: '/' },
-                { icon: 'mdi-folder', text: 'Minhas Provas', route: '/provas' },
+                /*{ icon: 'mdi-folder', text: 'Minhas Provas', route: '/provas' },*/
                 { icon: 'mdi-account', text: 'Alunos', route: '/alunos' },
             ]
         }
